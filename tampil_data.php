@@ -39,11 +39,11 @@ $no = 1;
                 <td><?= $row['harga_jual'] ?></td>
                 <td>
                     <a href="edit.php?id=<?= $row['id_barang'] ?>">edit</a>
-                    <a href="hapus.php?action=delete&id=<?= $row['id_barang'] ?>">hapus</a>
+                    <a href="proses_barang.php?action=delete&id=<?= $row['id_barang'] ?>" onclick="return confirm('Apakah anda yakin?')">hapus</a>
                 </td>
             </tr>
         <?php endforeach; ?>
     </table>
-</body>
+</body>`
 
 </html>
