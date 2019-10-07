@@ -54,7 +54,7 @@ class Database
         return $query->fetch_array();
     }
 
-    function update_data($nama_barang, $stok, $harga_beli, $harga_jual)
+    function update_data($nama_barang, $stok, $harga_beli, $harga_jual, $id_barang)
     {
         // Update data dari tabel barang berdasarkan id barang
         $query = mysqli_query($this->koneksi, "UPDATE tb_barang SET
@@ -62,6 +62,7 @@ class Database
                                                 stok = '$stok',
                                                 harga_beli = '$harga_beli',
                                                 harga_jual = '$harga_jual'
+                                                WHERE id_barang = '$id_barang'
                                                 ");
     }
 

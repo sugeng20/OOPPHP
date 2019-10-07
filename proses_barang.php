@@ -16,7 +16,7 @@ if ($action == 'add') {
 }
 // Update data
 else if ($action == 'update') {
-    $koneksi->update_data($_POST['nama_barang'], $_POST['stok'], $_POST['harga_beli'], $_POST['harga_jual']);
+    $koneksi->update_data($_POST['nama_barang'], $_POST['stok'], $_POST['harga_beli'], $_POST['harga_jual'], $_POST['id_barang']);
     header('location: tampil_data.php');
 }
 // Hapus data
